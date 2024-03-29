@@ -19,7 +19,9 @@ function gameLoop() {
   game.draw();
 
   // Call the game loop again
-  requestAnimationFrame(gameLoop);
+  if (!game.gameOver) {
+    requestAnimationFrame(gameLoop);
+  }
 }
 
 gameLoop();
